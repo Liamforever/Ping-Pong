@@ -33,6 +33,8 @@ class Enemy(GameSprite):
 
 background = transform.scale(image.load("backspace.png"), (win_width, win_height))
 
+player = Player('rocket.png',100, 80, 320,400,10)
+
 window = display.set_mode((win_width, win_height))
 display.set_caption("Ping-Pong")
 
@@ -46,6 +48,8 @@ while game:
         if e.type == QUIT:
             game = False
     if finish != True:
+        player.draw()
+        player.update()
         window.blit(background, (0, 0))
         display.update()
     clock.tick(FPS)
