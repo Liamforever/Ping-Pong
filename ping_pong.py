@@ -31,7 +31,7 @@ class Enemy(GameSprite):
             self.rect.y = 0
             Player.lost += 1
 
-background = transform.scale(image.load("backspace.png"), (win_width, win_height))
+background = transform.scale(image.load("fon.jpg"), (win_width, win_height))
 
 player = Player('rocket.png',100, 80, 320,400,10)
 
